@@ -1,0 +1,5 @@
+.lesson-timing{padding:0;list-style:none;border-top:1px solid var(--s-line)}
+.lesson-timing li{display:grid;grid-template-columns:6em 1fr minmax(12em,24em);gap:1.2rem;padding:1.3rem 0;border-bottom:1px solid var(--s-line)}
+.lesson-timing time{font:650 1.8rem var(--s-display)}
+.lesson-timing details summary{cursor:pointer;color:var(--s-accent)}
+@media(max-width:700px){.lesson-timing li{grid-template-columns:4em 1fr}.lesson-timing details{grid-column:2}}

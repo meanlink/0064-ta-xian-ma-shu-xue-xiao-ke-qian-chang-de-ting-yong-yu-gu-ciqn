@@ -1,0 +1,5 @@
+.call-board{display:grid;grid-template-columns:1.8fr 1fr;align-items:start;gap:1rem}
+.decision-rule{border-inline-start:7px double var(--s-accent);padding:.9rem 1.2rem;margin-bottom:1rem;background:var(--s-panel)}
+.decision-rule dl{display:grid;grid-template-columns:10em 1fr;margin:1rem 0 0}
+.decision-rule dt,.decision-rule dd{margin:0;border-top:1px solid var(--s-line);padding:.3rem 0}
+@media(max-width:720px){.call-board{grid-template-columns:1fr}.decision-rule dl{grid-template-columns:1fr}}

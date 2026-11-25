@@ -1,0 +1,7 @@
+.ring-paddock{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem}
+.ring-lane{border:3px dashed var(--s-line);padding:1.15rem}
+.ring-lane[data-shelter=true]{grid-row:span 2;align-content:start;background:var(--s-panel)}
+.ring-cap{font:600 clamp(2rem,5vw,4.2rem)/1.25 var(--s-display);display:block}
+.ring-cap small{font-size:1rem}
+.ring-link{margin-top:1rem}
+@media(max-width:700px){.ring-paddock{grid-template-columns:1fr}}
