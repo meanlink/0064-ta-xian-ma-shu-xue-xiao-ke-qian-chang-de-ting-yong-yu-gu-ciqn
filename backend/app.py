@@ -13,6 +13,7 @@ from pydantic import BaseModel, Field
 
 import domain
 from core import CACHE, db, initialize, password_hash, require, token_for
+from lesson_move import ReviewConflict, review_conflict_handler
 from scripts.seed_demo import seed_all
 
 logging.basicConfig(level=logging.INFO)
@@ -30,6 +31,7 @@ async def lifespan(_app):
     yield
 
 app = FastAPI(lifespan=lifespan)
+app.add_exception_handler(ReviewConflict, review_conflict_handler)
 app.include_router(domain.router)
 
 @app.middleware("http")

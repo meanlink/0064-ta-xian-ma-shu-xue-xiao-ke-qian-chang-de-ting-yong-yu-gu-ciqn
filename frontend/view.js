@@ -7,7 +7,7 @@ export function table(headers, rows, message = '暂无记录，请先补齐上�
 export function choices(rows, label, value = row => row.code) {
   return rows.map(row => `<option value="${h(value(row))}">${h(label(row))}</option>`).join('')
 }
-export const states = Object.freeze({draft:'待核查',open:'办理中',approved:'已批准',closed:'已办结',held:'暂缓',ready:'已就绪',assigned:'已指派',published:'已发布',pending:'待处理',archived:'已封存'})
+export const states = Object.freeze({draft:'待核查',open:'办理中',approved:'已批准',closed:'已办结',held:'暂缓',ready:'已就绪',assigned:'已指派',published:'已发布',pending:'待处理',review:'待复核',pending_review:'待复核',archived:'已封存'})
 export const stateBadge = value => badge(states[value] || value,value)
 export function heading(title, body) {
   return `<header class="module-heading"><h1>${h(title)}</h1><p>${h(body)}</p></header>`
